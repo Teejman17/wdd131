@@ -1,0 +1,88 @@
+/* color palette
+https://coolors.co/363020-605c4e-a49966-c7c7a6-eaffda */
+
+:root {
+    --primary-color: #363020;
+    --secondary-color: #605C4E;
+    --accent1-color: #A49966;
+    --accent2-color: #C7C7A6;
+    --heading-font: 'Red+Hat+Display+JPwght@600', serif;
+    --text-font: 'Noto+Sans+JPwght@100', serif;
+    --padding: 1rem;
+    --border: 1.5px solid rgb(0 0 0 / 0.1);
+}
+
+header h1 {
+    display: block;
+    font-family: var(--heading-font);
+    background-color: var(--accent1-color);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    font-size: 30px;
+}
+
+nav {    
+    margin: 0 auto 2rem;
+	max-width: auto;
+}
+
+.navigation-bar {
+    list-style: none;
+    font-family: var(--heading-font);
+    font-size: 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigation-bar li {
+	flex: 1 1 auto;
+}
+
+.navigation-bar a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-1 {
+    padding: 1rem;
+    grid-row: 1;
+    border: var(--border);
+    border-radius: 8px;
+}
+
+.card-1 h2 {
+    background-color: var(--accent1-color);
+    padding: 8px;
+}
+
+.card-1 img {
+    float: right;
+    max-width: 200px;
+    height: auto;
+}
+
+.card-2 {
+    padding: 1rem;
+    grid-row: 2;
+}
