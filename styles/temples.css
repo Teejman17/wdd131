@@ -1,0 +1,124 @@
+/* color palette - https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2A9D8F;
+    --accent1-color: #E9C46A;
+    --accent2-color: #F4A261;
+    --accent3-coler: #E76F51;
+    --padding: 1rem;
+    --border: 1.5px solid rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Lato', 'Roboto', sans-serif;
+}
+/* mobile ********************************/
+header {
+    background-color:#264653;
+    color: white;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 15px;
+    margin: 0 auto;
+    border: var(--border);
+    box-shadow: 0 0 30px #333;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+nav {
+    background-color:#2A9D8F;
+    margin: o auto;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "✖️";
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.navigation a {
+    display: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #9ed4ce;
+    text-decoration: dashed;
+    color: #000;
+}
+
+.open a {
+	display: block;
+}
+
+.active {
+    color: #F4A261;
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 25px;
+    place-items: center;
+}
+
+@media (min-width: 700px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+    #menu {
+		display: none; 
+	}
+
+    .navigation {
+        flex-direction: row;
+    }
+
+	.navigation ul {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	.navigation a {
+        display: block;
+		flex: 1 1 100%;
+	}
+
+    footer p {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 6px;
+    font-size: 14px;
+}
+}
+
