@@ -1,7 +1,7 @@
-const CurrentYear = new Date().getFullYear();
+const currentYearSpan = new Date().getFullYear();
 
 const yearSpan = document.querySelector('footer #currentyear');
 
-const lastModified = document.querySelector('footer #lastModified')
+const lastModified = document.querySelector('footer #lastModified');
 // alert(document.lastModified);
 
