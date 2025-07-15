@@ -23,6 +23,7 @@ main {
 	background-color: #ddd;
 	display: flex;
 	flex-direction: column;
+	
 }
 
 input,
