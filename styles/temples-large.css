@@ -1,4 +1,4 @@
-@media (min-width: 740px) {
+@media (min-width: 600px) {
 	header {
 		display: flex;
 		align-items: center;
@@ -13,12 +13,20 @@
         flex-direction: row;
     }
 
-	.navigation ul {
+	nav ul {
+		display: flex;
 		justify-content: flex-end;
 		flex-direction: row;
 	}
+
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		text-decoration: none;
+	}
 	.navigation a {
         display: block;
+		padding: 1rem;
 		flex: 1 1 100%;
 	}
 }
