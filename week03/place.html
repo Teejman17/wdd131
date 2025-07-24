@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W03 Place - Jamaica</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <!-- <script src="scripts/place.js"> defer</script> -->
+</head>
+<body>
+    <header>
+        <div>
+            <h1>⬛🟨🟩Jamaica🟩🟨⬛</h1>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width:600px)" srcset="images/jamaica-large.webp">
+                <!-- <source media="(min-width:570px)" srcset="images/hero-medium.webp"> -->
+                <img src="images/jamaica-small.webp" alt="Jamaica" width="400" height="500">
+            </picture>
+        </div>
+        <div class="container">
+            <section class="data-info">
+                <h2>Data</h2>
+                <div>
+                    <span class="area">Area:</span>
+                    <span class="value">10,991 km2</span>
+                </div>
+                <div>
+                    <span class="population">Population:</span>
+                    <span class="value">2,824,913</span>
+                </div>
+                <div>
+                    <span class="capitol">Capitol:</span>
+                    <span class="value">Kingston</span>
+                </div>
+                <div>
+                    <span class="languages">Languages:</span>
+                    <span class="value">English, Jamaican Patois</span>
+                </div>
+                <div>
+                    <span class="currency">Currency:</span>
+                    <span class="value">Jamaican Dollar</span>
+                </div>
+                <div>
+                    <span class="time-zone">Time Zone:</span>
+                    <span class="value">UTC-5:00 (EST)</span>
+                </div>
+                <div>
+                    <span class="calling-code">Calling Code:</span>
+                    <span class="value">+1</span>
+                </div>
+                <div>
+                    <span class="internet">Internet TLD:</span>
+                    <span class="value">.jm</span>
+                </div>
+            </section>
+            <section class="weather-info">
+                <h2>Weather</h2>
+                <img src="images/weather-icon-svg.svg" alt="weather icon" width="80" height="80">
+                <div>
+                    <span class="temperature">Temperature:</span>
+                    <span class="value">89°F</span>
+                </div>
+                <div>
+                    <span class="conditions">Conditions:</span>
+                    <span class="value">Mostly Cloudy</span>
+                </div>
+                <div>
+                    <span class="wind">Wind:</span>
+                    <span class="value">7 MPH</span>
+                </div>
+                <div>
+                    <span class="windchill">Wind Chill:</span>
+                    <span class="value" id="windchill-value">N/A</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="copyrightYear"></span> 2025 | TJ McCoy | Utah, USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/place.js"> defer</script>
+
+</body>
+</html>

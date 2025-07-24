@@ -1,0 +1,18 @@
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Makes the photo completely cover the frame. It zooms in and possibly cuts off parts of the image to fit the screen */
+/* .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* Ensures entire photo fits in screen. Possibly will have empty space around like in Widescreen mode of a movie theater */
+/* .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} */

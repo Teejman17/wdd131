@@ -1,0 +1,123 @@
+/*color palette: https: //coolors.co/df2935-86ba90-f5f3bb-dfa06e-412722 */
+
+.root {
+    --primary-color: #DF2935;
+    --secondary-color: #87ba91;
+    --accent-color1: #F5F3BB;
+    --accent-color2: #DFA06E;
+    --accent-color3: #412722;
+    --padding: 1rem;
+}
+
+body {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* mobile view */
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+header {
+    color: #060606;
+    background-color: #87ba91;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+    max-width: 600px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.hero {
+    margin-bottom: 2rem;
+}
+
+.hero picture {
+    width: 100%;
+    display: block;
+    /* height: 100%;
+    object-fit: contain; */
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container {
+    display: block;
+    padding: 0 15px;
+}
+
+.data-info, .weather-info {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* display: flex;
+    flex-direction: column;
+    gap: 5px; */
+}
+
+.data-info h2, .weather-info h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+.area, .population, .capitol, .languages, .currency, .time-zone,
+.calling-code, .internet, .temperature, .conditions, .wind, .windchill {
+    margin-right: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: left;
+} 
+
+.data-info > div, .weather-info > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.data-info span, .weather-info span {
+    padding: 0 5px;
+}
+
+.data-info .value, .weather-info .value {
+    text-align: right;
+}
+
+.weather-info img {
+    margin: 0 auto;
+    display: block;
+    width: 70px;
+    height: auto;
+}
+
+footer {
+    background-color: #87ba91;
+    color: white;
+    text-align: center;
+    padding: .5rem;
+    width: 100%;
+    margin-top: auto;
+}
+
