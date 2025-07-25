@@ -19,6 +19,7 @@ body {
 }
 
 /* mobile view */
+@media screen and (max-width: 600px) {
 
 main {
     margin: 0 auto;
@@ -120,4 +121,4 @@ footer {
     width: 100%;
     margin-top: auto;
 }
-
+}

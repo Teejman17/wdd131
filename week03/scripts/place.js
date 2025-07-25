@@ -24,7 +24,7 @@ const windChillFactor = caluclateWindChill(staticTemperatureFahrenheit, staticWi
         windChillElement.textContent = "N/A";
 }
     
-const currentYear = New Date().getFullYear();
+const currentYear = new Date().getFullYear();
 if (coprightYearElement) {
     copyrightYearElement.textContent = currentYear;
 }
