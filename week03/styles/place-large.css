@@ -45,7 +45,7 @@ header {
     /* display: grid; */
     grid-column: 1/2;
     grid-row: 1/2;
-    background: #f5f3bb7d;
+    background: #f5f3bb53;
     margin-top: 150px;
     text-align: center;
 } 
@@ -64,7 +64,7 @@ header {
     /* display: grid; */
     grid-column: 3/3;
     grid-row: 2/2;
-    background: #f5f3bb7d;
+    background: #f5f3bb53;
     margin-bottom: 150px;
 
 }
