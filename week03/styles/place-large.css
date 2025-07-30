@@ -1,11 +1,16 @@
 @media screen and (min-width: 600px) {
 
+main {
+    flex: 1;
+}
+
 header {
     width: 100%;
 }
 
 body {
     display: block;
+    min-height: 100%;
 }
 
 header {
@@ -24,6 +29,12 @@ header {
     height: 100%;
     object-fit: cover;
 
+}
+
+.hero picture {
+    display: block;
+    height: auto;
+    width: 100%;
 }
 
 .container {
