@@ -9,23 +9,24 @@
 		display: none; 
 	}
 
-    nav {
+    /* nav {
         flex-direction: row;
-    }
+    } */
 
-	nav ul {
+	/* nav ul {
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: row;
-	}
+	} */
 
 	.navigation {
 		display: flex;
 		flex-direction: row;
+		list-style: none;
 		text-decoration: none;
 	}
 	.navigation a {
-        display: block;
+        /* display: block; */
 		padding: 1rem;
 		flex: 1 1 100%;
 	}

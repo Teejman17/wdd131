@@ -58,15 +58,15 @@ nav {
 }
 
 .navigation {
-    display: flex;
+    display: none;
     list-style: none;
     flex-direction: column;
     justify-content: space-around;    
 }
 
-/* .navigation.open{
-    display: none;
-} */
+.navigation.open{
+    display: flex;
+}
 
 .navigation a {
     display: block;
@@ -84,9 +84,9 @@ nav {
     color: #000;
 }
 
-.open a {
+/* .open a {
 	display: block;
-}
+} */
 
 .active {
     color: #F4A261;
@@ -117,8 +117,8 @@ nav {
     height: 250px;
     display: block;
     object-fit: cover;
-    
 }
+
 
 figcaption {
     background-color: var(--primary-color);
@@ -126,7 +126,6 @@ figcaption {
     text-align: center;
     padding: .5rem;
 }
-
 
 
 footer {
