@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const hamButton = document.querySelector('#menu');
 	const navigation = document.querySelector('.navigation');
-	const navLinks = document.querySelector('.navigation a');
+	const navLinks = document.querySelectorAll('.navigation a');
 
 	hamButton.addEventListener('click', () => {
 		navigation.classList.toggle('open');
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	];
 
-// createTempleCard();
+	// createTempleCard();
 
 	function createTempleCard(filteredTemples) {
 		const templesContainer = document.querySelector('.temples-container');
@@ -129,17 +129,80 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	createTempleCard(temples);
 
-});
 
-const currentYear = new Date().getFullYear();
-const copyrightYearElement = document.getElementById('copyrightYear');
-if (copyrightYearElement) {
-	copyrightYearElement.textContent = currentYear;
-}
-const lastModifiedElement = document.getElementById('lastModified');
-if (lastModifiedElement) {
-	lastModifiedElement.textContent = new Date(document.lastModified).toLocaleString('en-US', {
-		month: '2-digit', day: '2-digit', year: 'numeric',
-		hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+	const filteredOldTemples = () => {
+		const filteredTemples = temples.filter(
+			(temple) => new Date(temple.dedicated).getFullYear() < 1900
+		);
+		// displayTemples(filteredTemples);
+		createTempleCard(filteredTemples);
+	};
+
+	const filteredNewTemples = () => {
+		const filteredTemples = temples.filter(
+			(temple) => new Date(temple.dedicated).getFullYear() > 2000
+		);
+		// displayTemples(filteredTemples);
+		createTempleCard(filteredTemples);
+	};
+
+	const filteredLargeTemples = () => {
+		const filteredTemples = temples.filter(
+			(temple) => temple.area > 90000
+		);
+		// displayTemples(filteredTemples);
+		createTempleCard(filteredTemples);
+	};
+
+	const filteredSmallTemples = () => {
+		const filteredTemples = temples.filter(
+			(temple) => temple.area < 10000
+		);
+		// displayTemples(filteredTemples);
+		createTempleCard(filteredTemples);
+	};
+
+	document.querySelector("nav").addEventListener("click", (event) => {
+		event.preventDefault();
+
+		if (event.target.tagName === "A") {
+			navLinks.forEach(navLink => navLink.classList.remove("active"));
+			event.target.classList.add("active");
+
+			const filter = event.target.id;
+		
+
+			switch (filter) {
+				case "old":
+					filteredOldTemples();
+					break;
+				case "new":
+					filteredNewTemples();
+					break;
+				case "large":
+					filteredLargeTemples();
+					break;
+				case "small":
+					filteredSmallTemples();
+					break;
+				case "home":
+				default:
+					createTempleCard(temples);
+					break;
+			}
+		}
 	});
-}
+
+	const currentYear = new Date().getFullYear();
+	const copyrightYearElement = document.getElementById('copyrightYear');
+	if (copyrightYearElement) {
+		copyrightYearElement.textContent = currentYear;
+	}
+	const lastModifiedElement = document.getElementById('lastModified');
+	if (lastModifiedElement) {
+		lastModifiedElement.textContent = new Date(document.lastModified).toLocaleString('en-US', {
+			month: '2-digit', day: '2-digit', year: 'numeric',
+			hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+		});
+	}
+});
