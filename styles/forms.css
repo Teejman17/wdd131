@@ -1,0 +1,143 @@
+/* colo palette - https: //coolors.co/f4f1de-e07a5f-3d405b-81b29a-f2cc8f */
+
+:root {
+    --primary-color: #3D405B;
+    --secondary-color: #81B29A;
+    --accent1-color: #E07A5F;
+    --accent2-color: #F2CC8F;
+    --accent3-coler: #F4F1DE;
+    --padding: 1rem;
+    --border: 1px solid #ddd;
+}
+
+* { -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Lato, Roboto, sans-serif;
+}
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+h1 {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    background-color: var(--accent3-coler);
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border: var(--border);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px #000;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input [type="date"],
+select,
+input [type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: .5rem;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.star-rating {
+    display: flex;
+    align-items:flex-start;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 1rem;
+    position: relative;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating > label {
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    font-family: Lato;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: var(--accent1-color);
+}
+
+.star-rating label:hover {
+    color: #ce5b3b;
+    transition: 0.2 ease;
+}
+
+.star-rating label:active::before {
+    transform:scale(1.1);
+}
+
+.star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+}
+
+.star-rating input:checked ~ label:before {
+    content: '\2605';
+}
+
+@-moz-document url-prefix() {
+    .star-rating input:checked~label:before {
+        font-size: 36px;
+        line-height: 21px;
+    }
+}
+
+.checkboxes label {
+    display: block;
+    margin: .5rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+
+input[type="submit"] {
+    display: block;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--accent3-color);
+    font-weight: bold;
+    border-radius: 6px;
+    width: 100%;
+    padding: .4rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #309866;
+}
+
+
