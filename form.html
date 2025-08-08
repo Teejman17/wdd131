@@ -21,13 +21,12 @@
     <main>
         <h1>Product Review</h1>
         <form method="get" action="review.html">
-        <label>Product Name
+        <label>Product Name*</label>
             <select name="product" id="product-list" required>
                 <option value="" disabled selected>Select a Product</option>
                 <!-- <option value="Product Array"></option> insert product array here -->
             </select>
-        </label>
-        <label>Overall Rating</label>
+        <label>Overall Rating*</label>
         <div class="star-rating">
             <input type="radio" id="5star" name="rating" value="5" required>
             <label for="5star"></label>
@@ -41,7 +40,7 @@
             <label for="1star"></label>
         </div>
 
-        <label>Date of Instalation</label>
+        <label>Date of Instalation*</label>
             <input type="date" id="installationDate" name="installationDate" required>
         <div class="checkboxes">
             <label>Which features did you find useful in this product? (Check all that apply)</label>
