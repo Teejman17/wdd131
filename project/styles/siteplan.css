@@ -79,6 +79,18 @@ main {
     text-align: center;
 }
 
+.right-column h2, .right-column h3, .right-column p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-column h2, .right-column h3 {
+        padding: 1.25rem 0;
+}
+
 /* #site-scenarios {
     border: var(--border);
     padding: 1rem;
