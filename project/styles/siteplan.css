@@ -137,6 +137,7 @@ main {
     padding: 1rem;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     box-shadow: 0px 2px 4px #000;
 }
@@ -167,6 +168,14 @@ input[type="email"], input[type="text"] {
     width: 100%;
     max-width: 400px;
     margin-bottom: 10px;
+}
+
+input:required {
+    border-right: solid 8px red;
+}
+
+input:required:valid {
+    border-right: solid 8px green;
 }
 
 .newsletter input[type="submit"] {

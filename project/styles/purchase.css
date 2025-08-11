@@ -16,7 +16,6 @@ header {
     background-color: var(--primary-color);
     color: white;
     padding: var(--padding);
-    align-items: center;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -49,7 +48,30 @@ nav {
 
 main {
     display: block;
-    text-align: center;
+    text-align: c;
+}
+
+.websites {
+    margin-top: 1rem;
+}
+
+.websites ul {
+    list-style-type: none;
+}
+
+.websites li {
+    border: var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #9483927e;
+}
+
+.websites img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    
 }
 
 #menu {
