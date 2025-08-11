@@ -144,7 +144,7 @@ main {
 
 .navigation a:hover {
     background-color: #9ed4ce;
-    text-decoration: dashed;
+    border-radius: 10px;
     color: #000;
 }
 
@@ -213,7 +213,7 @@ input:required:valid {
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: var(--padding);
     margin: 0 auto;
