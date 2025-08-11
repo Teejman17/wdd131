@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: var(--padding);
     align-items: center;
@@ -33,9 +33,13 @@ header h1 {
     text-align: center;
 }
 
-h2 {
-    color: var(--accent1-color);
+main h2 {
+    color: var(--secondary-color);
     text-align: center;
+}
+
+.right-column h2 {
+    color: var(--accent1-color);
 }
 
 h3 {
@@ -249,7 +253,7 @@ footer {
         justify-content: flex-end;
         align-items: center;
         grid-column: auto;
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
     }
 
     .navigation a {
