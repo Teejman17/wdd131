@@ -66,9 +66,14 @@ main {
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: #9483927e;
+    background-color: var(--accent3-color);
     text-align: center;
+    font-size: larger;
+}
 
+.websites li:hover {
+    background-color: var(--accent2-color);
+    color: #000;
 }
 
 .websites img {
@@ -84,9 +89,9 @@ main {
 .websites a {
     display: block;
     text-decoration: none;
-    color: var(--accent2-color);
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 
 #menu {
