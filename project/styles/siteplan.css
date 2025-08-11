@@ -1,10 +1,10 @@
 /* - color palette - https: //coolors.co/fa7921-fe9920-b9a44c-566e3d-948392 */
 :root {
-    --primary-color: #FA7921;
+    --primary-color: #fa761e;
     --secondary-color: #FE9920;
     --accent1-color: #B9A44C;
     --accent2-color: #566E3D;
-    --accent3-coler: #948392;
+    --accent3-color: #948392;
     --padding: 1rem;
     --border: 1.5px solid #948392;
 }
@@ -14,14 +14,12 @@ body {
 }
 
 header {
-    /* background-color: var(--primary-color); */
     background-color: var(--primary-color);
     color: white;
     padding: var(--padding);
-    margin: 0 auto;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: row;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
 }
 
@@ -31,11 +29,17 @@ header img {
 }
 
 header h1 {
-    margin: 0 auto;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    color: var(--accent1-color);
+    text-align: center;
 }
 
 h3 {
-    color: var(--accent1-color);
+    color: var(--accent2-color);
     text-align: center;
 }
 
@@ -45,23 +49,51 @@ nav {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+}
+
+/* #site-purpose {
+    border: var(--border);
+    padding: var(--padding);
+    margin-bottom: 1rem;
+    background-color: #9483927e;
+    border-radius: 10px;
+} */
+
+.left-column, .right-column {
+    border: var(--border);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #9483927e;
+    border-radius: 10px;
+}
+
+#site-purpose img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 
-#site-scenarios h3 {
+#site-scenarios h2 {
     text-align: center;
 }
+
+/* #site-scenarios {
+    border: var(--border);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #9483927e;
+    border-radius: 10px;
+} */
 
 #menu {
     font-size: 1.5rem;
     border: 0;
     background: none;
     color: #000;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    /* position: absolute; */
+    justify-self: end;
 }
 
 #menu::before {
@@ -73,10 +105,11 @@ main {
 }
 
 .navigation {
+    background-color: var(--accent1-color);
+    grid-column: 1 / 4;
     display: none;
     list-style: none;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .navigation.open {
@@ -99,10 +132,111 @@ main {
     color: #000;
 }
 
+.newsletter {
+    background-color: #566e3d9a;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #000;
+}
+
+.newsletter h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+}
+
+input[type="email"], input[type="text"] {
+    display: block;
+    padding: .5rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.newsletter input[type="submit"] {
+    display: block;
+    border: none;
+    background-color: var(--accent2-color);
+    border-radius: 6px;
+    color: #fff;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    padding: .4rem;
+    margin-top: 14px;
+    margin-left: 6px;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #86c147;
+}
+
 footer {
     background-color: var(--primary-color);
     color: white;
     padding: var(--padding);
     margin: 0 auto;
     text-align: center;
+}
+
+/* For desktop view */
+@media screen and (min-width: 760px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    main h2 {
+        grid-column: 1 / 3;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        /* grid-template-columns: auto 1fr auto; */
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    header h1 {
+        text-align: left;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: auto;
+        background-color: var(--primary-color);
+    }
+
+    .navigation a {
+        padding: 0 1rem;
+        /* color: #fff; */
+    }
+
+    #menu {
+        display: none;
+    }
 }
